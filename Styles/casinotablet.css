@@ -1,0 +1,107 @@
+@charset "utf-8";
+.casinotitle {
+	color: #800;
+	-o-text-shadow: 6px 6px 6px #FFF;
+	-moz-text-shadow: 6px 6px 6px #FFF;
+	-webkit-text-shadow: 6px 6px 6px #FFF;
+	text-shadow: 6px 6px 6px #FFF;
+	text-align: center;
+	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
+	padding: 0px 40px 10px 25px;
+	font-size: 4em;
+	margin-left: 7%;
+	background-color: #0F0045;
+	border: 8px double #000;
+	box-shadow: -10px 10px 10px #600;
+	border-radius: 25px;
+	opacity: 0.9;
+}
+header {
+	margin-top: 10px;
+	margin-left:5%;
+	margin-right:auto;
+	width: 80%;
+}
+.firepit {
+	z-index: 1;
+	display: inline;
+	position: fixed;
+	padding: 5px 3px 5px 10px;
+	right: 10px;
+	bottom: 10px;
+	background-color: #0F0045;
+	border: 8px double #000;
+	box-shadow: -10px 10px 10px #600;
+	border-radius: 25px;
+}
+
+#fireinfo {
+	z-index: 2;
+	display:none;
+	position:fixed;
+	right: 100px;
+	bottom: 30px;
+	height: 93px;
+	color: #800;
+	font-weight:bold;
+	line-height: 0px;
+	padding-top:0px;
+	padding-bottom: 0px;
+	
+}
+#movefooter{
+	margin-top:65%;
+}
+#footer {
+	margin-left:25%;
+	margin-right: 25%;
+	margin-top: 0px;;
+	color: #FFF;
+	text-align: center;
+	padding: 0px 6px 0px 6px;
+	background-color: #0F0045;
+	border: 8px double #000;
+	box-shadow: -10px 10px 10px #600;
+	border-radius: 25px;
+	opacity: 0.95;
+	font-weight:bold;
+	line-height: 2px;
+	-o-text-shadow: 1px 2px 0px #800;
+	-moz-text-shadow: 1px 2px 0px #800;
+	-webkit-text-shadow: 1px 2px 0px #800;
+	text-shadow: 1px 2px 0px #800;
+	}
+	.form {
+	font-size: 1em;
+	background-color: #0F0045;
+	border: 8px double #000;
+	box-shadow: -10px 10px 10px #600;
+	border-radius: 25px;
+	color: #FFF;
+	margin-top: 5%;
+	padding-left: 5%;
+
+}
+.formtable {
+	margin-left:20%;
+	margin-right:20%;
+	opacity: 0.95;
+	}
+.formfield {
+	margin-right: 140px;
+	text-align: left;
+	background-color: #0F0065;
+	color: #FFF;
+
+}
+.tab {
+	margin-left: 60px;
+}
+.submitbutton {
+	margin-left: 80%;
+	margin-bottom: 30px;
+	margin-top: 30px;
+}
+#quad {
+	
+}
