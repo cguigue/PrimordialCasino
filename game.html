@@ -1,0 +1,267 @@
+<!doctype html>
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.min.js" type="text/javascript"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<title>Primordial Casino - Roulette</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link media="screen" href="styles/casinostyles.css" rel="stylesheet" type="text/css">
+
+<link media="handheld,
+only screen and (max-width: 800px),
+only screen and (max-device-width:800px)"
+href="styles/casinotablet.css" type="text/css" rel="stylesheet"/>
+
+<link media="handheld,
+only screen and (max-width: 480px),
+only screen and (max-device-width:480px)"
+href="styles/casinomobile.css" type="text/css" rel="stylesheet"/>
+
+
+
+<script src="scripts/casinoAnimation.js" type="text/javascript"></script>
+<script src="scripts/roulette2.0.js" type="text/javascript"></script>
+<script src="scripts/parseformdata.js" type="text/javascript"></script>
+</head>
+<body id="wrapper" onLoad="setInterval('campfireanimation()', 100);
+
+validateForm();
+">
+
+<header id="header" ><h1 class="casinotitle">- Primordial Roulette -</h1>
+</header>
+
+
+
+<div id=content>
+<!-- caveboy and firepit images came from http://www.gifs.net/ -->
+<img onMouseOver="firepitextend()" onMouseOut="firepitshrinks()" src="images/campfire0.png" class="firepit" id="firepit" alt="Image of a fire pit"/>
+
+
+<div id="fireinfo">
+<p id="playername"></p><br/>
+<p id="playerinfo"></p><br/>
+<p>$<span id="money"></span> $</p>
+</div>
+<a id="notme" onClick="newUser()" href="intro.html"></a>
+<div  class="formtable">
+
+<table cellspacing="1px" class="green"  border="1">
+  <tr height="40px">
+    <td rowspan="2" class="green"></td>
+    <td class="droppable" colspan="3">1-6</td>
+    <td class="green"></td>
+    <td class="droppable" colspan="3">7-12</td>
+    <td class="green"></td>
+    <td class="droppable" colspan="3">13-18</td>
+    <td class="green"></td>
+    <td class="droppable" colspan="3">19-24</td>
+    <td class="green"></td>
+    <td class="droppable" colspan="3">25-30</td>
+    <td class="green"></td>
+    <td class="droppable" colspan="3">31-36</td>
+  </tr>
+  <tr height="40px">
+    <td class="droppable" colspan="1">1-3</td>
+    <td class="green"></td>
+    <td class="droppable" colspan="1">4-6</td>
+    <td class="green"></td>
+    <td class="droppable" colspan="1">7-9</td>
+    <td class="green"></td>
+    <td class="droppable" colspan="1">10-12</td>
+    <td class="green"></td>
+    <td class="droppable" colspan="1">13-15</td>
+    <td class="green"></td>
+    <td class="droppable" colspan="1">16-18</td>
+    <td class="green"></td>
+    <td class="droppable" colspan="1">19-21</td>
+    <td class="green"></td>
+    <td class="droppable" colspan="1">22-24</td>
+    <td class="green"></td>
+    <td class="droppable" colspan="1">25-27</td>
+    <td class="green"></td>
+    <td class="droppable" colspan="1">28-30</td>
+    <td class="green"></td>
+    <td class="droppable" colspan="1">31-33</td>
+    <td class="green"></td>
+    <td class="droppable" colspan="1">34-36</td>
+  </tr>
+  <tr height="40px">
+    <td class="droppable" width="40px" rowspan="5" id="zero">0</td>
+    <td width="40px" class="red">03</td>
+    <td class="green"></td>
+    <td width="40px" class="black">06</td>
+    <td class="green"></td>
+    <td width="40px" class="red">09</td>
+    <td class="green"></td>
+    <td width="40px" class="red">12</td>
+    <td class="green"></td>
+    <td width="40px" class="black">15</td>
+    <td class="green"></td>
+    <td width="40px" class="red">18</td>
+    <td class="green"></td>
+    <td width="40px" class="red">21</td>
+    <td class="green"></td>
+    <td width="40px" class="black">24</td>
+    <td class="green"></td>
+    <td width="40px" class="red">27</td>
+    <td class="green"></td>
+    <td width="40px" class="red">30</td>
+    <td class="green"></td>
+    <td width="40px" class="black">33</td>
+    <td class="green"></td>
+    <td width="40px" class="red">36</td>
+    <td class="droppable">Row 3</td>
+  </tr>
+  <tr><span class="elavate">
+    <td class="green"></td>
+    <td class="droppableQuad" abbr="3,2,6,5" ></td>
+    <td class="green"></td>
+    <td class="droppableQuad" abbr="6,5,9,8"></td>
+    <td class="green"></td>
+    <td class="droppableQuad" abbr="9,8,12,11"></td>
+    <td class="green"></td>
+    <td class="droppableQuad" abbr="12,11,15,14"></td>
+    <td class="green"></td>
+    <td class="droppableQuad" abbr="15,14,18,17"></td>
+    <td class="green"></td>
+    <td class="droppableQuad" abbr="18,17,21,20"></td>
+    <td class="green"></td>
+    <td class="droppableQuad" abbr="21,20,24,23"></td>
+    <td class="green"></td>
+    <td class="droppableQuad" abbr="24,23,27,26"></td>
+    <td class="green"></td>
+    <td class="droppableQuad" abbr="27,26,30,29"></td>
+    <td class="green"></td>
+    <td class="droppableQuad" abbr="30,29,33,32"></td>
+    <td class="green"></td>
+    <td class="droppableQuad" abbr="33,32,36,35"></td></span>
+  </tr>
+  <tr height="40px">
+    <td class="black">02</td>
+    <td class="green"></td>
+    <td class="red">05</td>
+    <td class="green"></td>
+    <td class="black">08</td>
+    <td class="green"></td>
+    <td class="black">11</td>
+    <td class="green"></td>
+    <td class="red">14</td>
+    <td class="green"></td>
+    <td class="black">17</td>
+    <td class="green"></td>
+    <td class="black">20</td>
+    <td class="green"></td>
+    <td class="red">23</td>
+    <td class="green"></td>
+    <td class="black">26</td>
+    <td class="green"></td>
+    <td class="black">29</td>
+    <td class="green"></td>
+    <td class="red">32</td>
+    <td class="green"></td>
+    <td class="black">35</td>
+    <td class="droppable">Row 2</td>
+  </tr>
+  <tr><div class="elavate">
+    <td class="green"></td>
+    <td class="droppableQuad" abbr="2,1,5,4"></td>
+    <td class="green"></td>
+    <td class="droppableQuad" abbr="5,4,8,7"></td>
+    <td class="green"></td>
+    <td class="droppableQuad" abbr="8,7,11,10"></td>
+    <td class="green"></td>
+    <td class="droppableQuad" abbr="11,10,14,13"></td>
+    <td class="green"></td>
+    <td class="droppableQuad" abbr="14,13,17,16"></td>
+    <td class="green"></td>
+    <td class="droppableQuad" abbr="17,16,20,19"></td>
+    <td class="green"></td>
+    <td class="droppableQuad" abbr="20,19,23,22"></td>
+    <td class="green"></td>
+    <td class="droppableQuad" abbr="23,22,26,25"></td>
+    <td class="green"></td>
+    <td class="droppableQuad" abbr="26,25,29,28"></td>
+    <td class="green"></td>
+    <td class="droppableQuad" abbr="29,28,32,31"></td>
+    <td class="green"></td>
+    <td class="droppableQuad" abbr="32,31,35,34"></td></div>
+  </tr>
+  <tr height="40px">
+    <td class="red">01</td>
+    <td class="green"></td>
+    <td class="black">04</td>
+    <td class="green"></td>
+    <td class="red">07</td>
+    <td class="green"></td>
+    <td class="black">10</td>
+    <td class="green"></td>
+    <td class="black">13</td>
+    <td class="green"></td>
+    <td class="red">16</td>
+    <td class="green"></td>
+    <td class="red">19</td>
+    <td class="green"></td>
+    <td class="black">22</td>
+    <td class="green"></td>
+    <td class="red">25</td>
+    <td class="green"></td>
+    <td class="black">28</td>
+    <td class="green"></td>
+    <td class="black">31</td>
+    <td class="green"></td>
+    <td class="red">34</td>
+    <td class="droppable">Row 1</td>
+  </tr>
+  <tr height="40px">
+    <td colspan="3" class="green"></td>
+    <td class="droppable" colspan="4">4-9</td>
+    <td class="droppable" colspan="4">10-15</td>
+    <td class="droppable" colspan="4">16-21</td>
+    <td class="droppable" colspan="4">22-27</td>
+    <td class="droppable" colspan="4">28-33</td>
+  </tr>
+  <tr height="40px">
+    <td rowspan="2" class="green"></td>
+    <td class="droppable" colspan="8">1-12</td>
+    <td class="droppable" colspan="8">13-24</td>
+    <td class="droppable" colspan="7">25-36</td>
+  </tr>
+  <tr height="40px">
+    <td class="droppable" colspan="4">1-18</td>
+    <td class="droppable" colspan="4">Even</td>
+    <td class="red" colspan="4">Red</td>
+    <td class="black" colspan="4">Black</td>
+    <td class="droppable" colspan="4">Odd</td>
+    <td class="droppable" colspan="3">19-36</td>
+  </tr>
+	<tr>
+		<td class="green" colspan="9">
+		<img class="token" src="images/token1.png" width="45" height="45" alt="1"/> 
+		<img class="token" src="images/token2.png" width="45" height="45" alt="5"/>
+		<img class="token" src="images/token3.png" width="45" height="45" alt="25"/>
+		<img class="token" src="images/token4.png" width="45" height="45" alt="100"/> 
+		</td>
+        <td class="green" colspan="7">
+		<input type="button" onClick="spinRouletteWheel()"  value="Spin!" >
+		<div class="displayArea"> <p> Hello! Enjoy and have fun!</p></div>
+		</td>
+		<td class="green" colspan="9">
+		<img id="wheel" src="images/rouletteWheel.png" width="250" height="250" alt="Picture of a roulette wheel"/>
+		</td>
+	</tr>
+</table>
+</div>
+
+
+
+
+
+<div id="newUser"></div>
+</div><div id=movefooter>
+<footer id="footer">
+<p>&copy; Primordial Casino</p></footer></div>
+</body>
+</html>

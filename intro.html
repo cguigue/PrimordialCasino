@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<title>Primordial Casino Casino - Intro</title>
+
+<link media="screen" href="styles/casinostyles.css" rel="stylesheet" type="text/css">
+
+<link media="handheld,
+only screen and (max-width: 800px),
+only screen and (max-device-width:800px)"
+href="styles/casinotablet.css" type="text/css" rel="stylesheet"/>
+
+<link media="handheld,
+only screen and (max-width: 480px),
+only screen and (max-device-width:480px)"
+href="styles/casinomobile.css" type="text/css" rel="stylesheet"/>
+
+<script src="scripts/casinoAnimation.js" type="text/javascript">
+</script>
+<script src="scripts/validation.js" type="text/javascript">
+</script>
+</head>
+
+<body id="wrapper" onLoad="setInterval('campfireanimation()', 100);
+cookieCheck();">
+
+<header id="header" ><h1 class="casinotitle">Primordial Casino</h1>
+</header>
+
+
+
+<div id=content>
+
+    <div id="fireinfo">
+        <p id="playername"></p><br/>
+        <p id="playerinfo"></p>
+        <p id="money"></p>
+    </div>
+
+<!-- caveboy and firepit images came from http://www.gifs.net/ -->
+<img onMouseOver="firepitextend()" onMouseOut="firepitshrinks()" src="images/campfire0.png" class="firepit" id="firepit" alt="Image of a fire pit"/>
+<div  class="formtable">
+  <form id="playerinformation" class="form" onSubmit="return validateForm();" action="game.html" method="get">
+    <table>
+      <tr>
+        <td colspan="2"><h3 class="tab">Enter your Information</h3></td>
+      </tr>
+      <tr>
+        <td><label class="formitem" for="firstname">First Name:</label></td>
+        <td><input class="formfield" placeholder="First Name" type="text" name="firstname" id="firstname" size="15" maxlength="20"/></td>
+      </tr>
+      <tr>
+        <td><label class="formitem" for="lastname">Last Name:</label></td>
+        <td><input class="formfield" placeholder="Last Name" type="text" name="lastname" id="lastname" size="15" maxlength="20"/></td>
+      </tr>
+      <tr>
+        <td><label class="formitem" for="phonenumber"> Phone Number: </label></td>
+        <td><input class="formfield" placeholder="123-456-7890" type="text" name="phonenumber" size="20" maxlength="40" id="phonenumber"/></td>
+      </tr>
+      <tr>
+        <td><label class="formitem" for="postalcode"> Postal Code: </label></td>
+        <td><input class="formfield" placeholder="A9B 8C7" type="text" name="postalcode" maxlength="40" id="postalcode"/></td>
+      </tr>
+      <tr>
+        <td><label class="formitem" for="startingmoney"> Starting Money: </label></td>
+        <td  class="formitem"><input class="formfield"  placeholder="$1000" type="number" name="startingmoney" maxlength="40" id="startingmoney"/></td>
+      </tr>
+      <tr >
+        <td><input class="submitbutton"	 type="submit" value="Submit"/></td>
+      </tr>
+    </table>
+  </form>
+</div>
+
+</div><div id=movefooter>
+<footer id="footer">
+<p>&copy; Primordial Casino</p></footer></div>
+</body>
+</html>

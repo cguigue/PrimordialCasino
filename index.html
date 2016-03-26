@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<title>Primordial Casino Casino</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link media="screen" href="styles/casinostyles.css" rel="stylesheet" type="text/css">
+
+<link media="handheld,
+only screen and (max-width: 800px),
+only screen and (max-device-width:800px)"
+href="styles/casinotablet.css" type="text/css" rel="stylesheet"/>
+
+<link media="handheld,
+only screen and (max-width: 480px),
+only screen and (max-device-width:480px)"
+href="styles/casinomobile.css" type="text/css" rel="stylesheet"/>
+
+<script src="scripts/casinoAnimation.js" type="text/javascript">
+</script>
+</head>
+
+<body id="wrapper" onLoad="
+setInterval('caveboyanimation()', 100);
+setInterval('campfireanimation()', 100);
+setInterval('slowmovingmeteor()', 70);
+setInterval('mildmovingmeteor()', 80);
+setInterval('fastmovingmeteor()',80);
+timeoutcaller();
+">
+
+<header id="header" ><h1 class="casinotitle">Primordial Casino</h1>
+
+
+</header>
+
+
+
+<div id=content>
+
+<!--Original pictures came from http://www.giffengaffenguffen.dk-->
+<img class="meteor1" src="images/meteor0.png" id="meteor1" alt="Image of a meteor"/>
+<img class="meteor2" src="images/meteor1.png" id="meteor2" alt="Image of a meteor"/>
+<img class="meteor3" src="images/meteor2.png" id="meteor3" alt="Image of a meteor"/>
+
+<img id="slotmachines" src="images/slot0.png" width="146" height="34" alt=""/> 
+
+<img id="redtoken" src="images/redtoken0.png" width="53" height="53" alt=""/> 
+
+<!-- caveboy and firepit images came from http://www.gifs.net/ -->
+<img class="caveboy" src="images/caveboy0.png" id="caveboy"  alt="Image of a cave boy"/>
+<img onMouseOver="firepitextend()" onMouseOut="firepitshrinks()" src="images/campfire0.png" class="firepit" id="firepit" alt="Image of a fire pit"/>
+<img id="moneypile" src="images/moneypile.png" width="600" height="555" alt=""/>
+<img id="moneybill" src="images/moneybill.png" width="599" height="293" alt=""/>
+<div id="fireinfo">
+<p id="playername">your name here</p><br/>
+<p id="playernumber">123-456-789 <span id="postalcode">A1B 3C2</span></p><br/>
+<p id="money">$$Money$$</p>
+
+</div>
+<form id="skip"><a href="intro.html">
+<input id="skipbutton" type="button" value="Skip"/></a>
+</form>
+
+<a id="enterbutton" class="enterbutton" href="intro.html">
+<canvas  id="myCanvas" width="239" height="64">
+<img id="enter0" src="images/enter0.png" width="239" height="64" alt=""/>
+ </canvas>
+</a>
+
+</div><div id=movefooter>
+<footer id="footer">
+<p>&copy; Primordial Casino</p></footer></div>
+</body>
+</html>
